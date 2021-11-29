@@ -1,0 +1,12 @@
+package:
+  name: python_libs_demo
+  version: 0.0.01
+
+build:
+  number: 3
+
+requirements:
+  run:
+    - python
+about:
+  summary: This is a simple meta-package
