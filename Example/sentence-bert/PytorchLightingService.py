@@ -19,6 +19,12 @@ from bentoml.frameworks.pytorch import PytorchModelArtifact
 @bentoml.artifacts([PytorchModelArtifact('model'), TokenizerArtifact("tokenizer"), ])
 class SentenceBertService(bentoml.BentoService):
     # @lru_cache()
+    """
+    SentenceBertService 接口
+
+
+    """
+
     @bentoml.api(input=JsonInput(), output=JsonOutput(), batch=True)
     def predict(self, parsed_json):
         # test()
