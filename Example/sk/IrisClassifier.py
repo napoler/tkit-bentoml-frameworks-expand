@@ -10,7 +10,7 @@ from bentoml import web_static_content
 from bentoml.adapters import DataframeInput
 from bentoml.frameworks.sklearn import SklearnModelArtifact
 
-
+# @save_to_dir("test.py") # 测试保存文件
 @bentoml.env(infer_pip_packages=True)
 @bentoml.artifacts([SklearnModelArtifact('model')])
 @web_static_content('./static')

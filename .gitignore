@@ -2,6 +2,6 @@ _site/
 _draft/
 *.egg-info/
 dist/
-data/
+data/*
 lightning_logs/
 build/
