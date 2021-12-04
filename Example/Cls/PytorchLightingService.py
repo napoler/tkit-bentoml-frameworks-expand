@@ -36,24 +36,24 @@ class PytorchLightingService(bentoml.BentoService):
         model.eval()
         # # parsed_json
         tokenizer = self.artifacts.tokenizer.get("tokenizer")
-        maxLen=32
+        maxLen = 32
         # print(type(parsed_json))
         # print(parsed_json)
-        text=parsed_json[0]['text']
-        
+        text = parsed_json[0]['text']
+
         # print("text",text)
         # tokenizer = BertTokenizerFast.from_pretrained("/data_200t/chenyaozu/data/base_model/chinese_roberta_L-4_H-512")
-        print(dir(tokenizer))
-        print(dir(model))
-        inputData=tokenizer(text,padding="max_length",max_length=maxLen,return_tensors="pt",truncation=True)
+        # print(dir(tokenizer))
+        # print(dir(model))
+        inputData = tokenizer(text, padding="max_length", max_length=maxLen, return_tensors="pt", truncation=True)
         # # input_tensor = torch.from_numpy(df.to_numpy())
         # # return self.artifacts.model(input).numpy()
         # # return self.artifacts.model(inputData['input_ids'],inputData['token_type_ids'],inputData['attention_mask']).numpy()
         # print(inputData)
-        out=model(inputData['input_ids'],inputData['token_type_ids'],inputData['attention_mask'])
+        out = model(inputData['input_ids'], inputData['attention_mask'])
         # return inputData['input_ids'].numpy()
         return out[0].tolist()
-    
+
     @bentoml.api(input=JsonInput(),output=JsonOutput(), batch=True)
     def test(self, parsed_json):
         model = self.artifacts.cls
@@ -64,7 +64,7 @@ class PytorchLightingService(bentoml.BentoService):
         # print(type(parsed_json))
         # print(parsed_json)
         text=parsed_json[0]['text']
-        
+
         # print("text",text)
         # tokenizer = BertTokenizerFast.from_pretrained("/data_200t/chenyaozu/data/base_model/chinese_roberta_L-4_H-512")
         print(dir(tokenizer))

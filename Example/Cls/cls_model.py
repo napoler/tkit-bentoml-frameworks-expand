@@ -10,7 +10,7 @@ import pytorch_lightning as pl
 from transformers import BertTokenizer, AutoModelForTokenClassification, AutoConfig
 
 
-class Cls(pl.LightningModule):
+class ClsModel(pl.LightningModule):
     """
 
 
