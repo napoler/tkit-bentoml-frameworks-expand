@@ -1,7 +1,12 @@
+import sys
+
 import bentoml
 from bentoml.adapters import JsonInput
 
-from TokenizerArtifact import TokenizerArtifact
+# 移动到上级目录
+sys.path.append("../../")
+
+from frameworks.TokenizerArtifact import TokenizerArtifact
 
 """
 保存BertTokenizer分词方案
