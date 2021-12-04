@@ -155,8 +155,9 @@ class TokenizerArtifact(BentoServiceArtifact):
             )
 
     def set_dependencies(self, env: BentoServiceEnv):
-        if env._infer_pip_packages:
-            env.add_pip_packages(['xgboost'])
+        # if env._infer_pip_packages:
+        #     env.add_pip_packages(['xgboost'])
+        pass
 
     def pack(self, model, metadata=None):
         loaded_model = None

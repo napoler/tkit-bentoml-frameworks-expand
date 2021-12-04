@@ -10,10 +10,16 @@ from bentoml.adapters import JsonInput, JsonOutput
 from bentoml.frameworks.pytorch import PytorchModelArtifact
 
 
+# add cache
+# from functools import lru_cache
+
+
 @bentoml.env(infer_pip_packages=True)
-@bentoml.artifacts([PytorchModelArtifact('cls'), TokenizerArtifact("tokenizer"),])
+# @bentoml.artifacts([PytorchModelArtifact('cls'), TokenizerArtifact("tokenizer"),])
+@bentoml.artifacts([PytorchModelArtifact('cls'), TokenizerArtifact("tokenizer"), ])
 class PytorchLightingService(bentoml.BentoService):
-    @bentoml.api(input=JsonInput(),output=JsonOutput(), batch=True)
+    # @lru_cache()
+    @bentoml.api(input=JsonInput(), output=JsonOutput(), batch=True)
     def predict(self, parsed_json):
         # test()
         model = self.artifacts.cls
