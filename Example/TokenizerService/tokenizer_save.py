@@ -1,8 +1,6 @@
 from transformers import AutoTokenizer
-from tokenizer_test import TokenizerService
-from transformers import AutoTokenizer
 
-from tokenizer_test import TokenizerService
+from TokenizerService import TokenizerService
 
 ts = TokenizerService()
 model_name = "uer/chinese_roberta_L-2_H-128"
