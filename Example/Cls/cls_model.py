@@ -39,8 +39,6 @@ class ClsModel(pl.LightningModule):
     def forward(self, input_ids,  attention_mask=None):
         """
         分类解决方案
-
-
         """
         output = self.model(input_ids=input_ids, attention_mask=attention_mask)
         return output[0]
