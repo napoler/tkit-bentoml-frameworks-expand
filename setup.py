@@ -6,16 +6,15 @@ from setuptools import setup
 
 # 这里是基本的信息
 
-name='tkitDemo'#修改包名字-
-version='0.0.0.2'+str(time.time())[:8]
-description='Terry toolkit Demo,'
-author='Terry Chan'
-author_email='napoler2008@gmail.com'
-url='http://docs.terrychan.org/tkit-lr-pytorch/'
+name = 'tkit-bentoml-frameworks-expand'  # 修改包名字-
+version = '0.0.0.1' + str(time.time())[:8]
+description = 'Terry toolkit tkit-bentoml-frameworks-expand,'
+author = 'Terry Chan'
+author_email = 'napoler2008@gmail.com'
+url = 'http://docs.terrychan.org/tkit-lr-pytorch/'
 
 copyright = '2021, Terry Chan'
 language = 'zh_cn'
-
 
 this_directory = os_path.abspath(os_path.dirname(__file__))
 """帮助[https://www.notion.so/6bade2c6a5f4479f82a4e67eafcebb3a]

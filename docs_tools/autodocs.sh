@@ -20,12 +20,19 @@ pip install sphinx-autobuild
 pip install recommonmark
 
 
+pip install BentoML
+pip install pytorch-lightning
+pip install transformers
+pip install scikit-learn
+pip install pytorch
+
+
 rm -rf ../docs 
 #
 #清理之前生成的文档
 rm -rf ./source/res/
 #扫描目录 Demo
-sphinx-apidoc -o ./source/res ../Demo
+sphinx-apidoc -o ./source/res ../frameworks
 
 #编译成为html
 #make html
