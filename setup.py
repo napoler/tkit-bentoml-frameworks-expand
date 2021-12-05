@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from setuptools import find_packages, setup
-from os import path as os_path
 import time
+from os import path as os_path
 
+from setuptools import setup
 
 # 这里是基本的信息
 
@@ -55,15 +55,14 @@ setup(
     # install_requires=read_requirements('requirements.txt'),  # 指定需要安装的依赖
     long_description=long_description,
     long_description_content_type="text/markdown",
-    #依赖文件
+    # 依赖文件
     # install_requires=[
     #     # 'beautifulsoup4==4.7.1',
 
-
     # ],
-    packages=['Demo'],  # 扫描的目录
+    packages=['frameworks'],  # 扫描的目录
     nclude_package_data=True,  # 打包包含静态文件标识
-    )
+)
 
 """
 pip freeze > requirements.txt
