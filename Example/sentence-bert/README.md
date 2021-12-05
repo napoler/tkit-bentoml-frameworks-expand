@@ -81,7 +81,7 @@ class IrisClassifier(BentoService):
 ```commandline
  2009  saved_path=$(bentoml get SentenceBertService:20211205130816_BE4579 --print-location --quiet)
  2010  docker build -t napoler/sim_service $saved_path
- 2011  docker build -t napoler/sim_service $saved_path http_proxy=http://127.0.0.1:38573
+
  2013  docker build -t napoler/sim_service $saved_path --build-arg  http_proxy=http://127.0.0.1:38573
  2015  docker run -p 5002:5000 napoler/sim_service:latest
 

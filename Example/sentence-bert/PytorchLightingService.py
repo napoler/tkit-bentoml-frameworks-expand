@@ -4,7 +4,7 @@ import sys
 from os import path
 
 # sys.path.append("../../")
-from tkitBentomlFrameworksExpand import TokenizerArtifact
+from tkitBentomlFrameworksExpand.TokenizerArtifact import TokenizerArtifact
 
 sys.path.append(path.dirname(path.abspath(__file__)))
 import bentoml
@@ -18,7 +18,6 @@ from bentoml.frameworks.pytorch import PytorchModelArtifact
 
 
 @bentoml.env(infer_pip_packages=True)
-# @bentoml.artifacts([PytorchModelArtifact('cls'), TokenizerArtifact("tokenizer"),])
 @bentoml.artifacts([PytorchModelArtifact('model'), TokenizerArtifact("tokenizer"), ])
 class SentenceBertService(bentoml.BentoService):
     # @lru_cache()

@@ -10,7 +10,7 @@ https://github.com/napoler/tkit-bentoml-frameworks-expand
 
 ## 安装
 
-> pip install tkit-bentoml-frameworks-expandkkhh
+> pip install tkitBentomlFrameworksExpand
 
 
 官方文档
