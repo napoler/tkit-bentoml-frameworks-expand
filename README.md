@@ -1,5 +1,9 @@
 # bentoml expands
 
+[![Pages](https://github.com/napoler/tkit-bentoml-frameworks-expand/actions/workflows/sphinx-gitpages.yml/badge.svg)](https://github.com/napoler/tkit-bentoml-frameworks-expand/actions/workflows/sphinx-gitpages.yml)
+
+[![PyPI publish CI](https://github.com/napoler/tkit-bentoml-frameworks-expand/actions/workflows/upload-to-pip.yml/badge.svg)](https://github.com/napoler/tkit-bentoml-frameworks-expand/actions/workflows/upload-to-pip.yml)
+
 用来拓展的
 
 https://github.com/napoler/tkit-bentoml-frameworks-expand
