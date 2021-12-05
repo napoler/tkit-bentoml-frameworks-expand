@@ -7,7 +7,7 @@ from setuptools import setup
 # 这里是基本的信息
 
 name = 'tkit-bentoml-tkit-bentoml-frameworks-expand-expand'  # 修改包名字-
-version = '0.0.0.11' + str(time.time())[:8]
+version = '0.0.0.2' + str(time.time())[:8]
 description = 'Terry toolkit tkit-bentoml-tkit-bentoml-frameworks-expand-expand,'
 author = 'Terry Chan'
 author_email = 'napoler2008@gmail.com'
