@@ -89,6 +89,10 @@ class Model(pl.LightningModule):
         pooler = self.dropout(pooler)
         output = self.classifier(pooler)
         # output = self.classifierSigmoid(output)
+        # 输出使用sigmoid
+        Sigmoid = nn.Sigmoid()
+        output = Sigmoid(output)
+        # output=
         return output
 
     def mean_pooling(self, model_output, attention_mask):
