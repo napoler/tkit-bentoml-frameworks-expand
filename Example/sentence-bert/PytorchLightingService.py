@@ -1,10 +1,16 @@
 # from model.SequenceClassificationClear import SequenceClassification
 # 移动到上级目录
 import sys
+from os import path
 
-sys.path.append("../../")
+# sys.path.append("../../")
+from tkit
+
+-bentoml - frameworks - expand.TokenizerArtifact
+import TokenizerArtifact
+
+sys.path.append(path.dirname(path.abspath(__file__)))
 import bentoml
-from frameworks.TokenizerArtifact import TokenizerArtifact
 from bentoml.adapters import JsonInput, JsonOutput
 # from bentoml.adapters import DataframeInput
 from bentoml.frameworks.pytorch import PytorchModelArtifact

@@ -10,7 +10,7 @@ from model import Model
 # from transformers import BertTokenizerFast, BertForSequenceClassification
 # 移动到上级目录
 # sys.path.append("../../")
-# sys.path.append("frameworks")
+# sys.path.append("tkit-bentoml-frameworks-expand")
 # torch.jit.save(script, saved_model_path)
 # torch.save(model, saved_model_path)
 sys.path.append(path.dirname(path.abspath(__file__)))

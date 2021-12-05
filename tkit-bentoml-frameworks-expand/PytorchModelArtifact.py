@@ -59,7 +59,7 @@ class PytorchModelArtifact(BentoServiceArtifact):
     >>>
     >>> import bentoml
     >>> from bentoml.adapters import ImageInput
-    >>> from bentoml.frameworks.pytorch import PytorchModelArtifact
+    >>> from bentoml.tkit-bentoml-frameworks-expand.pytorch import PytorchModelArtifact
     >>>
     >>> @bentoml.env(infer_pip_packages=True)
     >>> @bentoml.artifacts([PytorchModelArtifact('net')])

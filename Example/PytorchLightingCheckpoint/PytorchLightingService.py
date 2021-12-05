@@ -4,7 +4,10 @@ import sys
 
 sys.path.append("../../")
 import bentoml
-from frameworks.TokenizerArtifact import TokenizerArtifact
+from tkit
+
+-bentoml - frameworks - expand.TokenizerArtifact
+import TokenizerArtifact
 from bentoml.adapters import JsonInput, JsonOutput
 # from bentoml.adapters import DataframeInput
 from bentoml.frameworks.pytorch import PytorchModelArtifact

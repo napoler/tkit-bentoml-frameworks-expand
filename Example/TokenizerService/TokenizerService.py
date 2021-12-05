@@ -6,12 +6,16 @@ from bentoml.adapters import JsonInput
 # 移动到上级目录
 sys.path.append("../../")
 
-from frameworks.TokenizerArtifact import TokenizerArtifact
+from tkit
+
+-bentoml - frameworks - expand.TokenizerArtifact
+import TokenizerArtifact
 
 """
 保存BertTokenizer分词方案
 
 """
+
 
 @bentoml.env(pip_packages=["transformers>=4.12.5"])
 @bentoml.artifacts([TokenizerArtifact("tokenizer")])
