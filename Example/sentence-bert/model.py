@@ -38,11 +38,12 @@ class Model(pl.LightningModule):
         config = AutoConfig.from_pretrained(pretrained)
         self.model = AutoModel.from_pretrained(pretrained, config=config)
         #         self.rnn = nn.GRU(config.hidden_size, config.hidden_size,dropout=dropout,num_layers=2,bidirectional=True)
-        self.rnn = nn.LSTM(config.hidden_size, config.hidden_size, dropout=dropout, num_layers=2, bidirectional=True)
+        # self.rnn = nn.LSTM(config.hidden_size, config.hidden_size, dropout=dropout, num_layers=2, bidirectional=True)
+        self.rnn = nn.GRU(config.hidden_size, config.hidden_size, dropout=dropout, num_layers=2, bidirectional=True)
         self.pre_classifier = nn.Linear(config.hidden_size * 6, config.hidden_size)
         self.dropout = torch.nn.Dropout(dropout)
         self.classifier = torch.nn.Linear(config.hidden_size, 1)
-        self.classifierSigmoid = torch.nn.Sigmoid()
+        # self.classifierSigmoid = torch.nn.Sigmoid()
         #
         # self.tomask = autoMask(
         #     # transformer,
@@ -87,7 +88,7 @@ class Model(pl.LightningModule):
         pooler = torch.nn.ReLU()(pooler)
         pooler = self.dropout(pooler)
         output = self.classifier(pooler)
-        output = self.classifierSigmoid(output)
+        # output = self.classifierSigmoid(output)
         return output
 
     def mean_pooling(self, model_output, attention_mask):
