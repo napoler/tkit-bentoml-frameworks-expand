@@ -11,7 +11,7 @@ version = '0.0.0.1' + str(time.time())[:8]
 description = 'Terry toolkit tkit-bentoml-frameworks-expand,'
 author = 'Terry Chan'
 author_email = 'napoler2008@gmail.com'
-url = 'http://docs.terrychan.org/tkit-lr-pytorch/'
+url = 'https://github.com/napoler/tkit-bentoml-frameworks-expand'
 
 copyright = '2021, Terry Chan'
 language = 'zh_cn'
