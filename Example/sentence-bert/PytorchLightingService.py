@@ -16,8 +16,8 @@ from bentoml.frameworks.pytorch import PytorchModelArtifact
 # add cache
 # from functools import lru_cache
 
-
-@bentoml.env(infer_pip_packages=True)
+@bentoml.env(pip_packages=['tkitbentomlframeworksexpand', 'transformers', 'torch'])
+# @bentoml.env(infer_pip_packages=True)
 @bentoml.artifacts([PytorchModelArtifact('model'), TokenizerArtifact("tokenizer"), ])
 class SentenceBertService(bentoml.BentoService):
     # @lru_cache()
