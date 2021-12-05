@@ -6,10 +6,7 @@ from bentoml.adapters import JsonInput
 # 移动到上级目录
 sys.path.append("../../")
 
-from tkit
-
--bentoml - frameworks - expand.TokenizerArtifact
-import TokenizerArtifact
+from tkitBentomlFrameworksExpand import TokenizerArtifact
 
 """
 保存BertTokenizer分词方案

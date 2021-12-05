@@ -4,10 +4,7 @@ import sys
 from os import path
 
 # sys.path.append("../../")
-from tkit
-
--bentoml - frameworks - expand.TokenizerArtifact
-import TokenizerArtifact
+from tkitBentomlFrameworksExpand import TokenizerArtifact
 
 sys.path.append(path.dirname(path.abspath(__file__)))
 import bentoml
