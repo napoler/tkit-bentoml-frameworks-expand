@@ -16,7 +16,9 @@
 # 推送到服务器
 
 > bentoml push TokenizerService:20211204223058_B31A26 --yatai-url=127.0.0.1:50051
+# Docker build过程中使用代理
 
+https://terrychan.org/2021/12/docker-build%e8%bf%87%e7%a8%8b%e4%b8%ad%e4%bd%bf%e7%94%a8%e4%bb%a3%e7%90%86/
 # 更多示例
 
 https://docs.bentoml.org/en/latest/concepts.html?highlight=docker#api-server-dockerization
