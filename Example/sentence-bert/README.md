@@ -84,6 +84,9 @@ class IrisClassifier(BentoService):
 
  2013  docker build -t napoler/sim_service $saved_path --build-arg  http_proxy=http://127.0.0.1:38573
  2015  docker run -p 5002:5000 napoler/sim_service:latest
+ 
+ 
+ bentoml containerize IrisClassifier:latest -t iris-classifier –build-arg EXTRA_PIP_INSTALL_ARGS=–extra-index-url=https://pypi.doubanio.com/simple/
 
 
 ```
